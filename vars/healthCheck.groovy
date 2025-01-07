@@ -1,5 +1,4 @@
 def call() {
-    stage('Health Check') {
         script {
             try {
                 sleep(20)   
@@ -12,5 +11,5 @@ def call() {
                 error("Health Check Failed")
             }
         }
-    }
+    
 }
