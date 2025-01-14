@@ -1,3 +1,5 @@
-def call(Map config){
-    sh "java -jar ${config.NEXUS_ARTIFACT_ID}-${config.ARTIFACT_VERS}-${config.DEPLOY_TAG}.jar &"
+def call(){
+    stage('Deploy Application'){
+        sh "java -jar ${env.NEXUS_ARTIFACT_ID}-${env.ARTIFACT_VERS}-${env.DEPLOY_TAG}.jar &"
+    }
 }
