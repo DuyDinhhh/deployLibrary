@@ -1,5 +1,5 @@
 def call() {
-    script {
+    stage('Health Check') {
         try {
             sleep(20)   
             def response = httpRequest url: 'http://192.168.66.5:8080'
